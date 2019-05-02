@@ -1,10 +1,7 @@
 package com.zfy.common.pojo;
 
-
 public class User {
-    private Long userId;
-
-    private String userPhone;
+    private Integer userId;
 
     private String userPwd;
 
@@ -14,25 +11,14 @@ public class User {
 
     private String userName;
 
-
     private String verifyCode;
 
-
-
-    public Long getUserId() {
+    public Integer getUserId() {
         return userId;
     }
 
-    public void setUserId(Long userId) {
+    public void setUserId(Integer userId) {
         this.userId = userId;
-    }
-
-    public String getUserPhone() {
-        return userPhone;
-    }
-
-    public void setUserPhone(String userPhone) {
-        this.userPhone = userPhone == null ? null : userPhone.trim();
     }
 
     public String getUserPwd() {
@@ -66,8 +52,6 @@ public class User {
     public void setUserName(String userName) {
         this.userName = userName == null ? null : userName.trim();
     }
-
-
 
     public String getVerifyCode() {
         return verifyCode;
