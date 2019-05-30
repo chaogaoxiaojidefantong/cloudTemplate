@@ -6,13 +6,20 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="eurekaService" />
         <module name="generator" />
         <module name="common" />
+        <module name="ZuulService" />
         <module name="adminService" />
-        <module name="zipkinService" />
-        <module name="zuulService" />
+        <module name="eurekaServcie" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="adminService" target="1.8" />
+      <module name="common" target="1.8" />
+      <module name="eurekaServcie" target="1.8" />
+      <module name="generator" target="1.8" />
+      <module name="java" target="1.8" />
+      <module name="ZuulService" target="1.8" />
+    </bytecodeTargetLevel>
   </component>
 </project>
