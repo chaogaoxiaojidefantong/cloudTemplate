@@ -9,7 +9,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 @SpringBootApplication
 @EnableZuulProxy
-@EnableEurekaClient
 @Controller
 public class ZuulApp {
     @RequestMapping("/")
