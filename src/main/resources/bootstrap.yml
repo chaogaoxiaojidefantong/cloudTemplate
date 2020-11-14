@@ -1,0 +1,5 @@
+spring:
+  #激活的配置
+  profiles:
+#    active: prod
+    active: dev

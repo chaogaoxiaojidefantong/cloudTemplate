@@ -1,0 +1,36 @@
+spring:
+  #服务名称
+  application:
+    name: app-demo
+  datasource:
+    url: jdbc:mysql://39.105.190.207:3308/demo?useUnicode=true&characterEncoding=utf8&autoReconnect=true&allowMultiQueries=true&useSSL=false&failOverReadOnly=false
+    username: root
+    password: yanglaiwei
+    jdriverClassName: com.mysql.cj.jdbc.Driver
+    type: com.alibaba.druid.pool.DruidDataSource
+  #  连接配置中心获取配置
+#  cloud:
+#    config:
+#      name: personnel
+#      profile: dev2 #对应配置服务中的{profile}
+#      discovery:
+#        enabled: true #启用发现服务功能
+#        service-id: config-center #指定配置中心工程的名称
+#服务注册到eureka注册中心
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:gainer@127.0.0.1:8100/eureka
+    #因为该应用为服务提供者，是eureka的一个客户端，需要注册到注册中心
+    register-with-eureka: true
+    #是否需要从eureka上检索服务
+    fetch-registry: true
+  instance:
+    prefer-ip-address: true #将自己的ip地址注册到Eureka服务中
+    ip-address: 127.0.0.1
+    instance-id: ${eureka.instance.ip-address}#${server.port} #指定实例id
+logging:
+  config: classpath:logback-spring.xml
+  pattern:
+    console: "%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n"
+    file: "%d{yyyy-MMM-dd HH:mm:ss.SSS} %-5level [%thread] %logger{15} - %msg%n"

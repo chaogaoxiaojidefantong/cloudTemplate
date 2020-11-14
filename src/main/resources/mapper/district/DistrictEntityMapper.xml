@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.gainer.demo.dao.district.mapper.DistrictMapper">
+<select id="selectEntity" resultType="com.gainer.demo.dao.district.entity.DistrictEntity">
+    select a.name as provinceName, b.name as cityName,c.name as areaName,a.province_code as provinceCode,b.city_code as cityCode,c.area_code as areaCode
+    from province a,city b,area c
+    <where>
+    <if test="provinceCode!=null">
+       and a.province_code=${provinceCode}
+    </if>
+    <if test="cityCode!=null">
+        and b.city_code=${cityCode}
+    </if>
+    <if test="areaCode!=null">
+        and c.area_code=${areaCode}
+    </if>
+    </where>
+    limit 1
+</select>
+</mapper>

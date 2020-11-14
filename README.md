@@ -1,10 +1,10 @@
-idea打开java文件夹
-eurekaService是注册中心
-zuulService是路由
-adminService是服务
-common用来存pojo和公共jar包
-启动：
-eurekaApp文件右键run,即可运行注册中心
-zuulApp文件右键run,即运行了路由
-adminServiceApp右键run,运行
-网址输入localhost:10001
+# 普通微服务模板
+
+适用于eureka构建的微服务模板
+
+http://localhost:8088/doc.html 查看swagger地址
+
+clone到本地后该修改配置的文件
+SwaggerConfig
+数据库配置
+
